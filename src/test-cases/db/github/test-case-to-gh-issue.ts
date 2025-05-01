@@ -9,6 +9,7 @@ export default function testCaseToGithubIssue(testCase: TestCase) {
   }
   labels.push(...Object.values(testCase.dimensions))
   labels.push(`generation-${testCase.generation}`)
+  labels.push(`kilted`)
 
   const outIssue: GithubIssue = {
     title: testCase.name,
